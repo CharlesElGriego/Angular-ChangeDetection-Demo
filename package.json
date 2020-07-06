@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "npx ng lint --format=stylish",
     "lint-fix": "npx ng lint --fix=true",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "server": "npx json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
