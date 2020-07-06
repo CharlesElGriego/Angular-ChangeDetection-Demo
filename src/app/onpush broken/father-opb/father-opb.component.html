@@ -1,0 +1,23 @@
+<div class="father__box">
+  <p>father-opb works!</p>
+  <mat-card class="card">
+
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick One" aria-label="Number" matInput [formControl]="myControl"
+        placeholder="Search by First Name" [matAutocomplete]="auto" />
+    </mat-form-field>
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="setSelected($event.option.value)"
+      [displayWith]="displayFn">
+      <mat-option *ngFor="let option of filteredOptions " [value]="option">
+        {{option.first_name}}
+      </mat-option>
+    </mat-autocomplete>
+
+  </mat-card>
+
+  <button mat-raised-button color="primary" (click)="addCount()">Add Seconds</button>
+
+  <app-son-opb [count]="count" [employee]="selectedEmployee"></app-son-opb>
+  <app-daughter-opb [employee]="selectedEmployee"></app-daughter-opb>
+</div>

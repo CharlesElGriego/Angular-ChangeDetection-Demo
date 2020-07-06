@@ -1,0 +1,11 @@
+<div class="son__box">
+  <p>son-opb works!</p>
+  <p> Seconds: {{count.number}}</p>
+  <ng-container *ngIf="!employee">
+    <p> No employee selected </p>
+  </ng-container>
+
+  <ng-container *ngIf="employee">
+    <p>{{employee.first_name}}, {{employee.last_name}}, {{employee.email}} </p>
+  </ng-container>
+</div>
