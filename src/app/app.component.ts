@@ -18,18 +18,20 @@ export class AppComponent implements OnInit, OnDestroy {
     },
     {
       link: 'onpush',
-      name: 'Push',
+      name: 'On Push',
+      exact: true
+    },
+    {
+      link: 'onpush-broken',
+      name: 'On Push Broken',
       exact: true
     }
   ];
   title = 'Change Detection Demo';
   //#endregion
 
-  //#region   Observables
-  //#endregion
 
   //#region   Private Properties
-  private alive = true;
   private mobileQueryListener: () => void;
   //#endregion
 
@@ -46,13 +48,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.registerEvents();
   }
   ngOnDestroy(): void {
-    this.alive = false;
   }
   //#endregion
 
-  //#region   Public Methods
-  //#endregion
 
   //#region   Private Methods
   private registerEvents(): void { }
+  //#endregion
 }
