@@ -8,6 +8,7 @@ import { Employee } from 'src/app/interfaces';
 })
 export class SonDComponent implements OnInit {
 
+  @Input() count: { number: number };
   @Input() employee: Employee;
 
   constructor() { }

@@ -16,6 +16,8 @@
 
   </mat-card>
 
-  <app-son-d [employee]="selectedEmployee"></app-son-d>
+  <button mat-raised-button color="primary" (click)="addCount()">Add Seconds</button>
+
+  <app-son-d [count]="count" [employee]="selectedEmployee"></app-son-d>
   <app-daughter-d [employee]="selectedEmployee"></app-daughter-d>
 </div>
