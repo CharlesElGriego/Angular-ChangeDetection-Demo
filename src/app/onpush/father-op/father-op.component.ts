@@ -15,6 +15,7 @@ import { Employee } from 'src/app/interfaces';
 export class FatherOpComponent implements OnInit, OnChanges {
 
   @Input() employees: Employee[] = [];
+  count = { number: 0 };
   selectedEmployee: Employee;
 
   myControl = new FormControl();
@@ -38,6 +39,11 @@ export class FatherOpComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('** Father', changes);
+  }
+  addCount(): void {
+    let num = this.count.number;
+    num++;
+    this.count = { ...this.count, number: num };
   }
 
   displayFn(employee: Employee): string {

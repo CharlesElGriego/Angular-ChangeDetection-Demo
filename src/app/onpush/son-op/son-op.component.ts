@@ -8,6 +8,7 @@ import { Employee } from 'src/app/interfaces';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SonOpComponent implements OnInit, OnChanges {
+  @Input() count: { number: number };
   @Input() employee: Employee;
 
   constructor() { }

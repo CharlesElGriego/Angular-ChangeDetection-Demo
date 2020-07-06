@@ -15,7 +15,8 @@
     </mat-autocomplete>
 
   </mat-card>
+  <button mat-raised-button color="primary" (click)="addCount()">Add Seconds</button>
 
-  <app-son-op [employee]="selectedEmployee"></app-son-op>
+  <app-son-op [count]="count" [employee]="selectedEmployee"></app-son-op>
   <app-daughter-op [employee]="selectedEmployee"></app-daughter-op>
 </div>
