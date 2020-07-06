@@ -1,0 +1,12 @@
+<div class="daughter__box">
+  <p>daughter-d works!</p>
+
+  <ng-container *ngIf="!employee">
+    <p> No employee selected </p>
+  </ng-container>
+
+  <ng-container *ngIf="employee">
+    <p>{{employee.first_name}}, {{employee.last_name}}, {{employee.email}} </p>
+    <button mat-raised-button color="primary" (click)="sayMyName()">Say my name</button>
+  </ng-container>
+</div>

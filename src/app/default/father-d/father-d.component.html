@@ -1,0 +1,21 @@
+<div class="father__box">
+  <p>father-d works!</p>
+  <mat-card class="card">
+
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick One" aria-label="Number" matInput [formControl]="myControl"
+        placeholder="Search by First Name" [matAutocomplete]="auto" />
+    </mat-form-field>
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="setSelected($event.option.value)"
+      [displayWith]="displayFn">
+      <mat-option *ngFor="let option of filteredOptions " [value]="option">
+        {{option.first_name}}
+      </mat-option>
+    </mat-autocomplete>
+
+  </mat-card>
+
+  <app-son-d [employee]="selectedEmployee"></app-son-d>
+  <app-daughter-d [employee]="selectedEmployee"></app-daughter-d>
+</div>
